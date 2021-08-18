@@ -8,7 +8,7 @@ pipeline {
         stage('install') {
             steps {
                 echo "bilding the aplication"
-                sh 'mvn install'
+               // sh 'mvn install'
             }
         }
         stage('test') {
