@@ -1,20 +1,24 @@
 pipeline {
     agent any
+    
+    tools{
+        maven 'Maven'
+    }
     stages {
-
         stage('install') {
             steps {
-                bat "mvn install -f Spring-Boot"
+                echo "bilding the aplication"
+                sh 'mvn install'
             }
         }
         stage('test') {
             steps {
-                bat "mvn test -f Spring-Boot"
+               echo "test the aplication"
             }
         }
-        stage('package') {
+        stage('deploy') {
             steps {
-                bat "mvn package -f Spring-Boot"
+                echo "deploy the aplication"
             }
         }
     }
