@@ -1,14 +1,13 @@
 pipeline {
-    agent any
+     agent { docker { image 'maven:3.3.3' } }
     
-    tools{
-        maven 'Maven'
-    }
+//     tools{
+//         maven 'Maven'
+//     }
     stages {
         stage('install') {
             steps {
-              maven 'Maven 3.3.9' 
-             jdk 'jdk8'
+                sh 'mvn --version'
                  echo "install the aplication"
             }
         }
