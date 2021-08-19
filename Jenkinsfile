@@ -7,8 +7,9 @@ pipeline {
     stages {
         stage('install') {
             steps {
-                echo "bilding the aplication"
-               // sh 'mvn install'
+              maven 'Maven 3.3.9' 
+             jdk 'jdk8'
+                 echo "install the aplication"
             }
         }
         stage('test') {
