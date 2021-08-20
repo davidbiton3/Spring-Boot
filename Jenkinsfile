@@ -1,5 +1,5 @@
 node {
-    stade('SCM Checkout'){
+    stage('SCM Checkout'){
         git 'https://github.com/davidbiton3/Spring-Boot'
     }
     stage('Compile-Package'){
