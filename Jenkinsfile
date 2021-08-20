@@ -1,10 +1,9 @@
-pipeline {
-    agent { docker { image 'maven:3.3.3' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'mvn --version'
-            }
-        }
+node {
+    stade('SCM Checkout'){
+        git 'https://github.com/davidbiton3/Spring-Boot'
+    }
+    stage('Compile-Package'){
+        def mvnHome = tool name: 'Maven', type: 'maven'
+        sh "${mvnHome}/bin/mvn package"
     }
 }
