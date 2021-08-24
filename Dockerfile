@@ -1,7 +1,7 @@
 FROM maven:3.6.0-jdk-8-slim AS build
 RUN apt-get update
 RUN apt-get -y install git
-RUN git clone https://github.com/davidbiton3/Spring-Boot.git
+#RUN git clone https://github.com/davidbiton3/Spring-Boot.git
 #RUN shopt -s extglob
 #RUN rm -v !("pom.xml")
 
