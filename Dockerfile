@@ -3,8 +3,8 @@ RUN apt-get update
 RUN apt-get -y install git
 
 
-COPY Spring-Boot/src /home/app/src
-COPY Spring-Boot/pom.xml /home/app
+COPY src /home/app/src
+COPY pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package
 
 #
